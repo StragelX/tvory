@@ -76,6 +76,11 @@ $(document).ready(function () {
   $(".owl_prev").click(function () {
     owl.trigger("prev.owl.carousel");
   });
+
+  AOS.init({
+    delay: 200,
+    once: true,
+  });
 });
 
 function SortWorkers(id) {
