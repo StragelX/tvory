@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/tail.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+</head>
+<body>
+    <nav class="fixed top-0 bottom-0 left-0 right-0 z-40 bg-white flex justify-center items-center hidden lg:-ml-[30%]">
+        <div class="flex flex-col gap-4 lg:gap-5 nav">
+            <a href="story.html" class="text-[15px] lg:text-3xl text-black font-extralight font-montserrat">ІСТ<i>О</i>РІЯ</a>
+
+            <a href="team.html" class="text-[15px] lg:text-3xl text-black font-extralight font-montserrat">КОМА<i>Н</i>ДА</a>
+
+            <a href="counsil.html" class="text-[15px] lg:text-3xl text-black font-extralight font-montserrat">НАГЛЯД<i>О</i>ВА РАДА</a>
+
+            <a href="structure.html" class="text-[15px] lg:text-3xl text-black font-extralight font-montserrat">СТРУ<i>К</i>ТУРА</a>
+
+            <a href="stratagy.html" class="text-[15px] lg:text-3xl text-black font-extralight font-montserrat">СТРАТЕГІЧНІ ІНІ<i>Ц</i>ІАТИВИ</a>
+
+            <a href="docks.html" class="text-[15px] lg:text-3xl text-black font-extralight font-montserrat">ДО<i>К</i>И</a>
+        </div>
+
+        <div class="absolute bottom-6 w-full lg:hidden">
+            <div class="flex items-center justify-center gap-7 mb-3">
+                <a href="" target="_blank" class="">
+                    <img src="img/instagram.svg" alt="">
+                </a>
+                
+                <a href="" target="_blank" class="">
+                    <img src="img/facebook.svg" alt="">
+                </a>
+                
+                <a href="" target="_blank" class="">
+                    <img src="img/youtube.svg" alt="">
+                </a>
+            </div>
+
+            <div class="flex items-center justify-center gap-3">
+                <a href="mailto:info@tvory.net" class="font-montserrat text-[8px] font-normal text-black">info@tvory.net</a>
+
+                <span class="w-[1px] h-[14px] bg-black"></span>
+
+                <p class="font-montserrat text-[8px] font-light text-black">КУ Львівський молодіжний центр</p>
+            </div>
+        </div>
+    </nav>
+
+    <header class="w-full bg-transparent fixed z-50 px-4 pt-7 lg:pt-4 lg:px-16 flex items-center justify-between">
+        <a href="/">
+            <svg class="fill-black w-[90px] h-[22px] lg:w-[150px] lg:h-10 logo mt-2">
+                <use href="img/svg/sprite/svg_sprite.svg#logo_tvoru" class="lg:hidden"></use>
+
+                <use href="img/svg/sprite/svg_sprite.svg#logo_tvoru_big" class="hidden lg:block"></use>
+            </svg>
+        </a>
+
+        <div class="flex items-center gap-6">
+            <a href="/en" class="text-black font-kiev text-[19px] font-light lang_switch">en</a>
+
+            <div class="burger mt-1 w-8 h-3 flex flex-col items-stretch justify-between cursor-pointer">
+                <div class="h-[1px] !bg-black top_line"></div>
+                <div class="h-[1px] !bg-black"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="pt-[100px] lg:pt-[106px] overflow-x-hidden pb-32">
+            <div class="container">
+                <div class="row">
+                    <div class="col_s_10 s_offset_2 col_l_12">
+                        <div class="w-full pb-14 lg:pb-28 titling_shadow lg:fixed z-20 lg:flex items-center lg:gap-6">
+                            <h1 class="text-[28px] lg:text-[60px] font-kiev text-black font-extralight leading-[30px]">
+                                КОМАНДОС
+                            </h1>
+    
+                            <img src="img/komanda_photo_header.jpg" alt="komanda" class="lg:h-11 grayscale">
+                        </div>
+
+                        <div class="hidden lg:flex fixed static_left top-[250px] flex-col gap-6 z-10 workers_switch">
+                            <button class="molodo" data-id="molodo">
+                                <svg class="fill-black hover:fill-yellow w-[54px] h-[54px] transition-all duration-300">
+                                    <use xlink:href="img/svg/sprite/svg_sprite.svg#logo_moldviz"></use>
+                                </svg>
+                            </button>
+
+                            <button class="open_lab" data-id="open_lab">
+                                <svg class="fill-black hover:fill-auqa w-[78px] h-[47px] transition-all duration-300">
+                                    <use xlink:href="img/svg/sprite/svg_sprite.svg#logo_lab"></use>
+                                </svg>
+                            </button>
+                            
+                            <button class="pix_lab" data-id="pix_lab">
+                                <svg class="fill-black hover:fill-yellow w-[54px] h-[54px] transition-all duration-300">
+                                    <use xlink:href="img/svg/sprite/svg_sprite.svg#logo_px"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row workers_wrap">
+                    <div class="s_hide col_l_12 !block">
+                        <div class="h-44"></div>
+                    </div>
+
+                    <div class="col_s_4 s_offset_1 l_offset_5" data-id="molodo">
+                        <div class="flex justify-center relative mb-9">
+                            <div class="w-[100px] h-[100px] lg:w-[140px] lg:h-[140px] relative flex-none group">
+                                <p class="whitespace-nowrap text-black font-kiev font-normal text-[14px] absolute z-10 left-1/2 -translate-x-1/2 -top-6 uppercase pointer-events-none text-center hidden group-hover:block">олег малець</p>
+
+                                <img src="img/worker/w1.png" alt="worker" class="max-w-full absolute left-1/2 -translate-x-1/2 z-0 group-hover:hidden">
+                                <img src="img/worker/w1_1.png" alt="worker" class="max-w-full absolute left-1/2 -translate-x-1/2 z-0 group-hover:block hidden">
+
+                                <img src="img/team_hover.svg" alt="star" class="absolute z-10 -bottom-2 -right-1 lg:-right-5 h-12 lg:h-20 hidden group-hover:block">
+
+                                <p class="absolute text-black font-montserrat font-normal text-[10px] lg:text-xs w-[100px] lg:w-[120px] leading-[1] left-20 lg:left-28 top-[70px] lg:top-24 z-20 pointer-events-none hidden group-hover:block">
+                                    Керівник мережі молодіжних просторів ТВОРИ!
+                                </p>
+
+                                <div class="absolute -left-2 z-20 hidden pointer-events-none group-hover:block group-hover:pointer-events-auto">
+                                    <a href="" class="mb-2 block" target="_blank">
+                                        <img src="img/worker/team_is_icon.png" class="w-7 h-7" alt="">
+                                    </a>
+                                    
+                                    <a href="" class="block" target="_blank">
+                                        <img src="img/worker/team_fb_icon.svg" class="w-7 h-7" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col_s_4 s_offset_3 l_offset_2" data-id="molodo">
+                        <div class="flex justify-center relative mb-9">
+                            <div class="w-[100px] h-[100px] lg:w-[140px] lg:h-[140px] relative flex-none group">
+                                <p class="whitespace-nowrap text-black font-kiev font-normal text-[14px] absolute z-10 left-1/2 -translate-x-1/2 -top-6 uppercase pointer-events-none text-center hidden group-hover:block">НАДЬОЖНА КУШНІР</p>
+
+                                <img src="img/worker/w3.png" alt="worker" class="max-w-full absolute left-1/2 -translate-x-1/2 z-0 group-hover:hidden">
+                                <img src="img/worker/w3_3.png" alt="worker" class="max-w-full absolute left-1/2 -translate-x-1/2 z-0 group-hover:block hidden">
+
+                                <img src="img/team_hover.svg" alt="star" class="absolute z-10 -bottom-2 -right-1 lg:-right-5 h-12 lg:h-20 hidden group-hover:block">
+
+                                <p class="absolute text-black font-montserrat font-normal text-[10px] lg:text-xs w-[100px] lg:w-[120px] leading-[1] left-20 lg:left-28 top-[70px] lg:top-24 z-20 pointer-events-none hidden group-hover:block">
+                                    Керівник мережі молодіжних просторів ТВОРИ!
+                                </p>
+
+                                <div class="absolute -left-2 z-20 hidden pointer-events-none group-hover:block group-hover:pointer-events-auto">
+                                    <a href="" class="mb-2 block" target="_blank">
+                                        <img src="img/worker/team_is_icon.png" class="w-7 h-7" alt="">
+                                    </a>
+                                    
+                                    <a href="" class="block" target="_blank">
+                                        <img src="img/worker/team_fb_icon.svg" class="w-7 h-7" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col_s_4 s_offset_6 l_offset_2" data-id="pix_lab">
+                        <div class="flex justify-center relative mb-9">
+                            <div class="w-[100px] h-[100px] lg:w-[140px] lg:h-[140px] relative flex-none group">
+                                <p class="whitespace-nowrap text-black font-kiev font-normal text-[14px] absolute z-10 left-1/2 -translate-x-1/2 -top-6 uppercase pointer-events-none text-center hidden group-hover:block">НАДЬОЖНА КУШНІР</p>
+
+                                <img src="img/worker/w2.png" alt="worker" class="max-w-full absolute left-1/2 -translate-x-1/2 z-0 group-hover:hidden">
+                                <img src="img/worker/w2_2.png" alt="worker" class="max-w-full absolute left-1/2 -translate-x-1/2 z-0 group-hover:block hidden">
+
+                                <img src="img/team_hover.svg" alt="star" class="absolute z-10 -bottom-2 -right-1 lg:-right-5 h-12 lg:h-20 hidden group-hover:block">
+
+                                <p class="absolute text-black font-montserrat font-normal text-[10px] lg:text-xs w-[100px] lg:w-[120px] leading-[1] left-20 lg:left-28 top-[70px] lg:top-24 z-20 pointer-events-none hidden group-hover:block">
+                                    Керівник мережі молодіжних просторів ТВОРИ!
+                                </p>
+
+                                <div class="absolute -left-2 z-20 hidden pointer-events-none group-hover:block group-hover:pointer-events-auto">
+                                    <a href="" class="mb-2 block" target="_blank">
+                                        <img src="img/worker/team_is_icon.png" class="w-7 h-7" alt="">
+                                    </a>
+                                    
+                                    <a href="" class="block" target="_blank">
+                                        <img src="img/worker/team_fb_icon.svg" class="w-7 h-7" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col_s_4 s_offset_5 l_offset_3" data-id="molodo">
+                        <div class="flex justify-center relative mb-9">
+                            <div class="w-[100px] h-[100px] lg:w-[140px] lg:h-[140px] relative flex-none group">
+                                <p class="whitespace-nowrap text-black font-kiev font-normal text-[14px] absolute z-10 left-1/2 -translate-x-1/2 -top-6 uppercase pointer-events-none text-center hidden group-hover:block">НАДЬОЖНА КУШНІР</p>
+
+                                <img src="img/worker/w4.png" alt="worker" class="max-w-full absolute left-1/2 -translate-x-1/2 z-0 group-hover:hidden">
+                                <img src="img/worker/w4_4.png" alt="worker" class="max-w-full absolute left-1/2 -translate-x-1/2 z-0 group-hover:block hidden">
+
+                                <img src="img/team_hover.svg" alt="star" class="absolute z-10 -bottom-2 -right-1 lg:-right-5 h-12 lg:h-20 hidden group-hover:block">
+
+                                <p class="absolute text-black font-montserrat font-normal text-[10px] lg:text-xs w-[100px] lg:w-[120px] leading-[1] left-20 lg:left-28 top-[70px] lg:top-24 z-20 pointer-events-none hidden group-hover:block">
+                                    Головний адмiнiстратор МолоДвiжЦентр.Львiв
+                                </p>
+
+                                <div class="absolute -left-2 z-20 hidden pointer-events-none group-hover:block group-hover:pointer-events-auto">
+                                    <a href="" class="mb-2 block" target="_blank">
+                                        <img src="img/worker/team_is_icon.png" class="w-7 h-7" alt="">
+                                    </a>
+                                    
+                                    <a href="" class="block" target="_blank">
+                                        <img src="img/worker/team_fb_icon.svg" class="w-7 h-7" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col_s_4 l_offset_4 l_offset_2" data-id="open_lab">
+                        <div class="flex justify-center relative mb-9">
+                            <div class="w-[100px] h-[100px] lg:w-[140px] lg:h-[140px] relative flex-none group">
+                                <p class="whitespace-nowrap text-black font-kiev font-normal text-[14px] absolute z-10 left-1/2 -translate-x-1/2 -top-6 uppercase pointer-events-none text-center hidden group-hover:block">НАДЬОЖНА КУШНІР</p>
+
+                                <img src="img/worker/w5.png" alt="worker" class="max-w-full absolute left-1/2 -translate-x-1/2 z-0 group-hover:hidden">
+                                <img src="img/worker/w5_5.png" alt="worker" class="max-w-full absolute left-1/2 -translate-x-1/2 z-0 group-hover:block hidden">
+
+                                <img src="img/team_hover.svg" alt="star" class="absolute z-10 -bottom-2 -right-1 lg:-right-5 h-12 lg:h-20 hidden group-hover:block">
+
+                                <p class="absolute text-black font-montserrat font-normal text-[10px] lg:text-xs w-[100px] lg:w-[120px] leading-[1] left-20 lg:left-28 top-[70px] lg:top-24 z-20 pointer-events-none hidden group-hover:block">
+                                    Керівник мережі молодіжних просторів ТВОРИ!
+                                </p>
+
+                                <div class="absolute -left-2 z-20 hidden pointer-events-none group-hover:block group-hover:pointer-events-auto">
+                                    <a href="" class="mb-2 block" target="_blank">
+                                        <img src="img/worker/team_is_icon.png" class="w-7 h-7" alt="">
+                                    </a>
+                                    
+                                    <a href="" class="block" target="_blank">
+                                        <img src="img/worker/team_fb_icon.svg" class="w-7 h-7" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col_s_4 s_offset_1 l_offset_3" data-id="molodo">
+                        <div class="flex justify-center relative mb-9">
+                            <div class="w-[100px] h-[100px] lg:w-[140px] lg:h-[140px] relative flex-none group">
+                                <p class="whitespace-nowrap text-black font-kiev font-normal text-[14px] absolute z-10 left-1/2 -translate-x-1/2 -top-6 uppercase pointer-events-none text-center hidden group-hover:block">олег малець</p>
+
+                                <img src="img/worker/w6.png" alt="worker" class="max-w-full absolute left-1/2 -translate-x-1/2 z-0 group-hover:hidden">
+                                <img src="img/worker/w6_6.png" alt="worker" class="max-w-full absolute left-1/2 -translate-x-1/2 z-0 group-hover:block hidden">
+
+                                <img src="img/team_hover.svg" alt="star" class="absolute z-10 -bottom-2 -right-1 lg:-right-5 h-12 lg:h-20 hidden group-hover:block">
+
+                                <p class="absolute text-black font-montserrat font-normal text-[10px] lg:text-xs w-[100px] lg:w-[120px] leading-[1] left-20 lg:left-28 top-[70px] lg:top-24 z-20 pointer-events-none hidden group-hover:block">
+                                    Керівник мережі молодіжних просторів ТВОРИ!
+                                </p>
+
+                                <div class="absolute -left-2 z-20 hidden pointer-events-none group-hover:block group-hover:pointer-events-auto">
+                                    <a href="" class="mb-2 block" target="_blank">
+                                        <img src="img/worker/team_is_icon.png" class="w-7 h-7" alt="">
+                                    </a>
+                                    
+                                    <a href="" class="block" target="_blank">
+                                        <img src="img/worker/team_fb_icon.svg" class="w-7 h-7" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col_s_4 s_offset_5 l_offset_2" data-id="open_lab">
+                        <div class="flex justify-center relative mb-9">
+                            <div class="w-[100px] h-[100px] lg:w-[140px] lg:h-[140px] relative flex-none group">
+                                <p class="whitespace-nowrap text-black font-kiev font-normal text-[14px] absolute z-10 left-1/2 -translate-x-1/2 -top-6 uppercase pointer-events-none text-center hidden group-hover:block">НАДЬОЖНА КУШНІР</p>
+
+                                <img src="img/worker/w2.png" alt="worker" class="max-w-full absolute left-1/2 -translate-x-1/2 z-0 group-hover:hidden">
+                                <img src="img/worker/w2_2.png" alt="worker" class="max-w-full absolute left-1/2 -translate-x-1/2 z-0 group-hover:block hidden">
+
+                                <img src="img/team_hover.svg" alt="star" class="absolute z-10 -bottom-2 -right-1 lg:-right-5 h-12 lg:h-20 hidden group-hover:block">
+
+                                <p class="absolute text-black font-montserrat font-normal text-[10px] lg:text-xs w-[100px] lg:w-[120px] leading-[1] left-20 lg:left-28 top-[70px] lg:top-24 z-20 pointer-events-none hidden group-hover:block">
+                                    Головний адмiнiстратор МолоДвiжЦентр.Львiв
+                                </p>
+
+                                <div class="absolute -left-2 z-20 hidden pointer-events-none group-hover:block group-hover:pointer-events-auto">
+                                    <a href="" class="mb-2 block" target="_blank">
+                                        <img src="img/worker/team_is_icon.png" class="w-7 h-7" alt="">
+                                    </a>
+                                    
+                                    <a href="" class="block" target="_blank">
+                                        <img src="img/worker/team_fb_icon.svg" class="w-7 h-7" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col_s_4 s_offset_2 l_offset_3" data-id="pix_lab">
+                        <div class="flex justify-center relative mb-9">
+                            <div class="w-[100px] h-[100px] lg:w-[140px] lg:h-[140px] relative flex-none group">
+                                <p class="whitespace-nowrap text-black font-kiev font-normal text-[14px] absolute z-10 left-1/2 -translate-x-1/2 -top-6 uppercase pointer-events-none text-center hidden group-hover:block">НАДЬОЖНА КУШНІР</p>
+
+                                <img src="img/worker/w8.png" alt="worker" class="max-w-full absolute left-1/2 -translate-x-1/2 z-0 group-hover:hidden">
+                                <img src="img/worker/w8_8.png" alt="worker" class="max-w-full absolute left-1/2 -translate-x-1/2 z-0 group-hover:block hidden">
+
+                                <img src="img/team_hover.svg" alt="star" class="absolute z-10 -bottom-2 -right-1 lg:-right-5 h-12 lg:h-20 hidden group-hover:block">
+
+                                <p class="absolute text-black font-montserrat font-normal text-[10px] lg:text-xs w-[100px] lg:w-[120px] leading-[1] left-20 lg:left-28 top-[70px] lg:top-24 z-20 pointer-events-none hidden group-hover:block">
+                                    Головний адмiнiстратор МолоДвiжЦентр.Львiв
+                                </p>
+
+                                <div class="absolute -left-2 z-20 hidden pointer-events-none group-hover:block group-hover:pointer-events-auto">
+                                    <a href="" class="mb-2 block" target="_blank">
+                                        <img src="img/worker/team_is_icon.png" class="w-7 h-7" alt="">
+                                    </a>
+                                    
+                                    <a href="" class="block" target="_blank">
+                                        <img src="img/worker/team_fb_icon.svg" class="w-7 h-7" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col_s_4 s_offset_2 l_offset_1" data-id="open_lab">
+                        <div class="flex justify-center relative mb-9">
+                            <div class="w-[100px] h-[100px] lg:w-[140px] lg:h-[140px] relative flex-none group">
+                                <p class="whitespace-nowrap text-black font-kiev font-normal text-[14px] absolute z-10 left-1/2 -translate-x-1/2 -top-6 uppercase pointer-events-none text-center hidden group-hover:block">НАДЬОЖНА КУШНІР</p>
+
+                                <img src="img/worker/w1.png" alt="worker" class="max-w-full absolute left-1/2 -translate-x-1/2 z-0 group-hover:hidden">
+                                <img src="img/worker/w1_1.png" alt="worker" class="max-w-full absolute left-1/2 -translate-x-1/2 z-0 group-hover:block hidden">
+
+                                <img src="img/team_hover.svg" alt="star" class="absolute z-10 -bottom-2 -right-1 lg:-right-5 h-12 lg:h-20 hidden group-hover:block">
+
+                                <p class="absolute text-black font-montserrat font-normal text-[10px] lg:text-xs w-[100px] lg:w-[120px] leading-[1] left-20 lg:left-28 top-[70px] lg:top-24 z-20 pointer-events-none hidden group-hover:block">
+                                    Головний адмiнiстратор МолоДвiжЦентр.Львiв
+                                </p>
+
+                                <div class="absolute -left-2 z-20 hidden pointer-events-none group-hover:block group-hover:pointer-events-auto">
+                                    <a href="" class="mb-2 block" target="_blank">
+                                        <img src="img/worker/team_is_icon.png" class="w-7 h-7" alt="">
+                                    </a>
+                                    
+                                    <a href="" class="block" target="_blank">
+                                        <img src="img/worker/team_fb_icon.svg" class="w-7 h-7" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col_s_4 s_offset_6 l_offset_4" data-id="molodo">
+                        <div class="flex justify-center relative mb-9">
+                            <div class="w-[100px] h-[100px] lg:w-[140px] lg:h-[140px] relative flex-none group">
+                                <p class="whitespace-nowrap text-black font-kiev font-normal text-[14px] absolute z-10 left-1/2 -translate-x-1/2 -top-6 uppercase pointer-events-none text-center hidden group-hover:block">НАДЬОЖНА КУШНІР</p>
+
+                                <img src="img/worker/w2.png" alt="worker" class="max-w-full absolute left-1/2 -translate-x-1/2 z-0 group-hover:hidden">
+                                <img src="img/worker/w2_2.png" alt="worker" class="max-w-full absolute left-1/2 -translate-x-1/2 z-0 group-hover:block hidden">
+
+                                <img src="img/team_hover.svg" alt="star" class="absolute z-10 -bottom-2 -right-1 lg:-right-5 h-12 lg:h-20 hidden group-hover:block">
+
+                                <p class="absolute text-black font-montserrat font-normal text-[10px] lg:text-xs w-[100px] lg:w-[120px] leading-[1] left-20 lg:left-28 top-[70px] lg:top-24 z-20 pointer-events-none hidden group-hover:block">
+                                    Головний адмiнiстратор МолоДвiжЦентр.Львiв
+                                </p>
+
+                                <div class="absolute -left-2 z-20 hidden pointer-events-none group-hover:block group-hover:pointer-events-auto">
+                                    <a href="" class="mb-2 block" target="_blank">
+                                        <img src="img/worker/team_is_icon.png" class="w-7 h-7" alt="">
+                                    </a>
+                                    
+                                    <a href="" class="block" target="_blank">
+                                        <img src="img/worker/team_fb_icon.svg" class="w-7 h-7" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col_s_4 l_offset_3" data-id="open_lab">
+                        <div class="flex justify-center relative mb-9">
+                            <div class="w-[100px] h-[100px] lg:w-[140px] lg:h-[140px] relative flex-none group">
+                                <p class="whitespace-nowrap text-black font-kiev font-normal text-[14px] absolute z-10 left-1/2 -translate-x-1/2 -top-6 uppercase pointer-events-none text-center hidden group-hover:block">НАДЬОЖНА КУШНІР</p>
+
+                                <img src="img/worker/w5.png" alt="worker" class="max-w-full absolute left-1/2 -translate-x-1/2 z-0 group-hover:hidden">
+                                <img src="img/worker/w5_5.png" alt="worker" class="max-w-full absolute left-1/2 -translate-x-1/2 z-0 group-hover:block hidden">
+
+                                <img src="img/team_hover.svg" alt="star" class="absolute z-10 -bottom-2 -right-1 lg:-right-5 h-12 lg:h-20 hidden group-hover:block">
+
+                                <p class="absolute text-black font-montserrat font-normal text-[10px] lg:text-xs w-[100px] lg:w-[120px] leading-[1] left-20 lg:left-28 top-[70px] lg:top-24 z-20 pointer-events-none hidden group-hover:block">
+                                    Керівник мережі молодіжних просторів ТВОРИ!
+                                </p>
+
+                                <div class="absolute -left-2 z-20 hidden pointer-events-none group-hover:block group-hover:pointer-events-auto">
+                                    <a href="" class="mb-2 block" target="_blank">
+                                        <img src="img/worker/team_is_icon.png" class="w-7 h-7" alt="">
+                                    </a>
+                                    
+                                    <a href="" class="block" target="_blank">
+                                        <img src="img/worker/team_fb_icon.svg" class="w-7 h-7" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col_s_4 l_offset_4" data-id="open_lab">
+                        <div class="flex justify-center relative mb-9">
+                            <div class="w-[100px] h-[100px] lg:w-[140px] lg:h-[140px] relative flex-none group">
+                                <p class="whitespace-nowrap text-black font-kiev font-normal text-[14px] absolute z-10 left-1/2 -translate-x-1/2 -top-6 uppercase pointer-events-none text-center hidden group-hover:block">НАДЬОЖНА КУШНІР</p>
+
+                                <img src="img/worker/w5.png" alt="worker" class="max-w-full absolute left-1/2 -translate-x-1/2 z-0 group-hover:hidden">
+                                <img src="img/worker/w5_5.png" alt="worker" class="max-w-full absolute left-1/2 -translate-x-1/2 z-0 group-hover:block hidden">
+
+                                <img src="img/team_hover.svg" alt="star" class="absolute z-10 -bottom-2 -right-1 lg:-right-5 h-12 lg:h-20 hidden group-hover:block">
+
+                                <p class="absolute text-black font-montserrat font-normal text-[10px] lg:text-xs w-[100px] lg:w-[120px] leading-[1] left-20 lg:left-28 top-[70px] lg:top-24 z-20 pointer-events-none hidden group-hover:block">
+                                    Керівник мережі молодіжних просторів ТВОРИ!
+                                </p>
+
+                                <div class="absolute -left-2 z-20 hidden pointer-events-none group-hover:block group-hover:pointer-events-auto">
+                                    <a href="" class="mb-2 block" target="_blank">
+                                        <img src="img/worker/team_is_icon.png" class="w-7 h-7" alt="">
+                                    </a>
+                                    
+                                    <a href="" class="block" target="_blank">
+                                        <img src="img/worker/team_fb_icon.svg" class="w-7 h-7" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col_s_4 s_offset_6 l_offset_4" data-id="pix_lab">
+                        <div class="flex justify-center relative mb-9">
+                            <div class="w-[100px] h-[100px] lg:w-[140px] lg:h-[140px] relative flex-none group">
+                                <p class="whitespace-nowrap text-black font-kiev font-normal text-[14px] absolute z-10 left-1/2 -translate-x-1/2 -top-6 uppercase pointer-events-none text-center hidden group-hover:block">НАДЬОЖНА КУШНІР</p>
+
+                                <img src="img/worker/w2.png" alt="worker" class="max-w-full absolute left-1/2 -translate-x-1/2 z-0 group-hover:hidden">
+                                <img src="img/worker/w2_2.png" alt="worker" class="max-w-full absolute left-1/2 -translate-x-1/2 z-0 group-hover:block hidden">
+
+                                <img src="img/team_hover.svg" alt="star" class="absolute z-10 -bottom-2 -right-1 lg:-right-5 h-12 lg:h-20 hidden group-hover:block">
+
+                                <p class="absolute text-black font-montserrat font-normal text-[10px] lg:text-xs w-[100px] lg:w-[120px] leading-[1] left-20 lg:left-28 top-[70px] lg:top-24 z-20 pointer-events-none hidden group-hover:block">
+                                    Керівник мережі молодіжних просторів ТВОРИ!
+                                </p>
+
+                                <div class="absolute -left-2 z-20 hidden pointer-events-none group-hover:block group-hover:pointer-events-auto">
+                                    <a href="" class="mb-2 block" target="_blank">
+                                        <img src="img/worker/team_is_icon.png" class="w-7 h-7" alt="">
+                                    </a>
+                                    
+                                    <a href="" class="block" target="_blank">
+                                        <img src="img/worker/team_fb_icon.svg" class="w-7 h-7" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="hidden lg:flex justify-between pointer-events-none pl-16 pr-10 fixed top-28 left-0 w-full z-20 hands_nav">
+            <a href="story.html" class="block w-16 h-7 relative pointer-events-auto group">
+                <p class="cursor-pointer text-black font-montserrat text-[15px] underline leading-[13px] group-hover:opacity-0">
+                    т<span class="italic">и</span>ць <br>
+                    н<span class="italic">а</span>з<span class="italic">а</span>д
+                </p>
+
+                <img src="img/hand_rigth.svg" alt="hand" class="absolute top-0 left-0 opacity-0 group-hover:opacity-100">
+            </a>
+
+            <a href="counsil.html" class="block w-16 h-7 relative pointer-events-auto group">
+                <p class="cursor-pointer text-black font-montserrat text-[15px] underline leading-[13px] group-hover:opacity-0">
+                    т<span class="italic">и</span>ць <br>
+                    вп<span class="italic">е</span>р<span class="italic">е</span>д
+                </p>
+
+                <img src="img/hand_rigth.svg" alt="hand" class="miror absolute top-0 left-0 opacity-0 group-hover:opacity-100">
+            </a>
+        </section>
+    </main>
+
+    <footer class="hidden md:block">
+        <div class="container">
+            <div class="row">
+                <div class="col_12">
+                    <div class="h-[1px] opacity-20 bg-black"></div>
+
+                    <div class="w-full lg:flex items-center justify-center gap-6 pb-12 pt-7">
+                        <a href="mailto:info@tvory.net" class="w-[103px] font-montserrat text-black font-normal text-sm hover:underline hover:italic">info@tvory.net</a>
+            
+                        <div class="bg-black w-[1px] h-[18px]"></div>
+            
+                        <p class="text-black font-montserrat font-normal text-xs">КУ Львівський молодіжний центр</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

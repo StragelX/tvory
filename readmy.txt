@@ -1,0 +1,1 @@
+npx tailwindcss -i ./css/tail_input.css -o ./css/tail.css --watch --minify

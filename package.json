@@ -1,0 +1,9 @@
+{
+    "name": "twory",
+    "version": "1.0.0",
+    "scripts": {
+        "tail_build": "npx tailwindcss -i ./css/tail_input.css -o ./css/tail.css --watch --minify",
+        "svg_sprite_generate": "svg-sprite-generate -d ./img/svg -o ./img/svg/sprite/svg_sprite.svg",
+        "start": "npm run tail_build"
+    }
+}
