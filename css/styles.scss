@@ -188,8 +188,10 @@ nav .nav a {
     background: url("../img/black_hand.svg") no-repeat center / contain;
 
     @media all and (min-width: 1024px) {
-      top: 13px;
+      top: 4px;
       left: -100px;
+      width: 40px;
+      height: 40px;
     }
   }
 
@@ -316,9 +318,12 @@ nav .nav a {
   }
 }
 
+.dino_wrap {
+  left: -7%;
+  top: 25%;
+}
+
 .dino {
-  left: -217px;
-  top: -166px;
   width: 270px;
   max-width: unset;
   transform: rotate(5deg);
@@ -331,16 +336,10 @@ nav .nav a {
 }
 
 .dino_face {
-  top: -97px;
-  left: -50px;
-  width: 100px;
+  width: 160px;
+  top: 121px;
+  left: 307px;
   animation: dino_face_show 1.5s step-start infinite;
-
-  @media all and (min-width: 1024px) {
-    top: 23%;
-    left: 6%;
-    width: 160px;
-  }
 }
 
 @keyframes dino_face_show {

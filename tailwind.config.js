@@ -16,6 +16,7 @@ module.exports = {
 
     fontFamily: {
       kiev: "'Kyiv Type Sans'",
+      kiev3: "'Kyiv_Type_Sans_3'",
       museo: "'Museo Sans Cyrl'",
       montserrat: "Montserrat",
     },
