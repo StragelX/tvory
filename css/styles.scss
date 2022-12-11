@@ -554,7 +554,7 @@ $time: 400ms;
 }
 @keyframes vertical_line_40 {
   from {height: 0;}
-  to {height: 520px;}
+  to {height: 590px;}
 }
 
 .rotate_90_5 {
@@ -572,12 +572,6 @@ $time: 400ms;
     height: 20vh;
     content: "";
   }
-}
-
-.logo_hover {
-  height: 70%;
-  width: 70%;
-  transform: translate(-50%, -60%);
 }
 
 .initiative_text {
@@ -714,4 +708,11 @@ $time: 400ms;
       }
     }
   }
+}
+
+.logo_hover {
+  width: 70%;
+  height: 70%;
+  left: 15%;
+  top: 15%;
 }

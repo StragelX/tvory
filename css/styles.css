@@ -1468,6 +1468,10 @@ img, video {
   margin-left: -19px;
 }
 
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -1784,8 +1788,20 @@ img, video {
   width: 10rem;
 }
 
+.w-\[65px\] {
+  width: 65px;
+}
+
+.w-\[50px\] {
+  width: 50px;
+}
+
 .w-\[100px\] {
   width: 100px;
+}
+
+.w-80 {
+  width: 20rem;
 }
 
 .max-w-none {
@@ -2593,20 +2609,14 @@ img, video {
   .lg\:gap-14 {
     gap: 3.5rem;
   }
-  .lg\:gap-36 {
-    gap: 9rem;
-  }
   .lg\:gap-12 {
     gap: 3rem;
   }
+  .lg\:gap-36 {
+    gap: 9rem;
+  }
   .lg\:gap-6 {
     gap: 1.5rem;
-  }
-  .lg\:gap-7 {
-    gap: 1.75rem;
-  }
-  .lg\:gap-8 {
-    gap: 2rem;
   }
   .lg\:border-\[1px\] {
     border-width: 1px;
@@ -2668,6 +2678,10 @@ img, video {
   .lg\:text-\[10px\] {
     font-size: 10px;
   }
+  .lg\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
   .lg\:text-\[37px\] {
     font-size: 37px;
   }
@@ -2689,10 +2703,6 @@ img, video {
   .lg\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
-  }
-  .lg\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
   }
   .lg\:font-medium {
     font-weight: 500;
@@ -3486,7 +3496,7 @@ nav .nav a:hover::before {
     height: 0;
   }
   to {
-    height: 520px;
+    height: 590px;
   }
 }
 .rotate_90_5 {
@@ -3502,12 +3512,6 @@ nav .nav a:hover::before {
   background-color: #fff;
   height: 20vh;
   content: "";
-}
-
-.logo_hover {
-  height: 70%;
-  width: 70%;
-  transform: translate(-50%, -60%);
 }
 
 .initiative_text {
@@ -3621,4 +3625,11 @@ nav .nav a:hover::before {
 .owl-carousel .owl-item.active + .active + .active {
   opacity: 0.5;
   transform: scale(0.4) translateY(70px);
+}
+
+.logo_hover {
+  width: 70%;
+  height: 70%;
+  left: 15%;
+  top: 15%;
 }/*# sourceMappingURL=styles.css.map */
