@@ -155,6 +155,22 @@ header {
   .white {
     display: none;
   }
+
+  &.index {
+    .black_icon {
+      display: none;
+    }
+
+    &.show_black {
+      .white_icon {
+        display: none;
+      }
+      
+      .black_icon {
+        display: block;
+      }
+    }
+  }
 }
 
 .burger {
@@ -357,10 +373,13 @@ nav .nav a {
 }
 
 .container {
-  padding-left: 15px;
-  padding-right: 15px;
   margin: 0 auto;
   max-width: 100%;
+
+  @media all and (max-width: 1000px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .arrow_hor {

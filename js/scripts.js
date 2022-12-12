@@ -6,6 +6,10 @@ $(document).ready(function () {
     $("nav").toggleClass("hidden");
     $(".lang_switch").toggleClass("!text-black");
     $(".burger > div").toggleClass("bg-black");
+
+    if ($("header").hasClass("index")) {
+      $("header").toggleClass("show_black");
+    }
   });
 
   $(".text_select").click(function () {
