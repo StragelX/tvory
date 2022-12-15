@@ -82,8 +82,9 @@ $(document).ready(function () {
   });
 
   AOS.init({
-    delay: 200,
     once: true,
+    delay: 400,
+    anchorPlacement: "bottom-bottom",
   });
 });
 

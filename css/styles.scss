@@ -37,11 +37,11 @@ main {
 
   &.bg-blue, &.bg-purple, &.bg-green {
     .struct_no_hover {
-      display: none;
+      opacity: 0;
     }
 
     .struct_hover {
-      display: block;
+      opacity: 1;
     }
 
     .struct_hover_text, h1, .hands_nav p, .initiative_text {
@@ -623,24 +623,26 @@ $time: 400ms;
   transform: rotate(154.7deg);
 }
 
+$elips_animate_spped: 2.5s;
+
 .animate_elips {
   stroke-dasharray: 1500;
   stroke-dashoffset: 1500;
   
   &.speed_1 {
-    animation: animate_elips 1.5s 300ms linear forwards;
+    animation: animate_elips $elips_animate_spped 300ms linear infinite;
   }
 
   &.speed_2 {
-    animation: animate_elips 1.5s 500ms linear forwards;
+    animation: animate_elips $elips_animate_spped 500ms linear infinite;
   }
 
   &.speed_3 {
-    animation: animate_elips 1.5s 700ms linear forwards;
+    animation: animate_elips $elips_animate_spped 700ms linear infinite;
   }
 
   &.speed_4 {
-    animation: animate_elips 1.5s 900ms linear forwards;
+    animation: animate_elips $elips_animate_spped 900ms linear infinite;
   }
 }
 
@@ -666,9 +668,39 @@ $time: 400ms;
   }
 }
 
+.logo_hand_animation {
+  transform: rotate(-90deg);
+  animation: logo_hand_animation 600ms 800ms linear forwards;
+}
+
+@keyframes logo_hand_animation {
+  from {
+    transform: rotate(-90deg);
+  }
+
+  to {
+    transform: rotate(0);
+  }
+}
+
 .text_select {
+  transition: all 180ms;
+  transform: scale(1);
+
+  &:hover {
+    opacity: 100 !important;
+    transition: all 180ms;
+    transform: scale(1.2);
+  }
+
   &.active {
     opacity: 100 !important;
+    transition: all 180ms;
+    transform: scale(1.4);
+
+    .strat_star_show {
+      opacity: 100;
+    }
   }
 }
 
@@ -682,7 +714,7 @@ $time: 400ms;
 }
 
 .static_left {
-  left: calc( (100vw - 956px) / 2 + 13px );
+  left: calc( (100vw - 956px) / 2 - 7px );
   max-width: calc((956px / 12) * 2);
 }
 

@@ -1226,6 +1226,10 @@ img, video {
   left: 2.25rem;
 }
 
+.left-1\/2 {
+  left: 50%;
+}
+
 .top-5 {
   top: 1.25rem;
 }
@@ -1236,10 +1240,6 @@ img, video {
 
 .top-11 {
   top: 2.75rem;
-}
-
-.left-1\/2 {
-  left: 50%;
 }
 
 .right-3 {
@@ -1440,6 +1440,14 @@ img, video {
   margin-bottom: 1.25rem;
 }
 
+.mt-24 {
+  margin-top: 6rem;
+}
+
+.mb-24 {
+  margin-bottom: 6rem;
+}
+
 .-ml-1 {
   margin-left: -0.25rem;
 }
@@ -1472,16 +1480,12 @@ img, video {
   margin-bottom: 0.5rem;
 }
 
-.mb-32 {
-  margin-bottom: 8rem;
+.mt-8 {
+  margin-top: 2rem;
 }
 
-.mb-24 {
-  margin-bottom: 6rem;
-}
-
-.mt-24 {
-  margin-top: 6rem;
+.mt-9 {
+  margin-top: 2.25rem;
 }
 
 .block {
@@ -1516,10 +1520,6 @@ img, video {
   height: 1.5rem;
 }
 
-.h-full {
-  height: 100%;
-}
-
 .h-3 {
   height: 0.75rem;
 }
@@ -1540,6 +1540,10 @@ img, video {
   height: 3rem;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .h-7 {
   height: 1.75rem;
 }
@@ -1550,14 +1554,6 @@ img, video {
 
 .h-5 {
   height: 1.25rem;
-}
-
-.h-0\.5 {
-  height: 0.125rem;
-}
-
-.h-0 {
-  height: 0;
 }
 
 .h-\[54px\] {
@@ -1638,6 +1634,10 @@ img, video {
 
 .h-\[100px\] {
   height: 100px;
+}
+
+.h-\[65px\] {
+  height: 65px;
 }
 
 .w-full {
@@ -1806,6 +1806,10 @@ img, video {
 
 .w-\[100px\] {
   width: 100px;
+}
+
+.w-\[80px\] {
+  width: 80px;
 }
 
 .max-w-none {
@@ -2138,12 +2142,12 @@ img, video {
   font-family: Montserrat;
 }
 
-.font-kiev {
-  font-family: Kyiv Type Sans;
-}
-
 .font-kiev3 {
   font-family: Kyiv_Type_Sans_3;
+}
+
+.font-kiev {
+  font-family: Kyiv Type Sans;
 }
 
 .font-museo {
@@ -2389,6 +2393,10 @@ img, video {
   fill: #0cc29f;
 }
 
+.hover\:fill-purple:hover {
+  fill: #5d2d8d;
+}
+
 .hover\:italic:hover {
   font-style: italic;
 }
@@ -2514,6 +2522,15 @@ img, video {
   .lg\:mt-1 {
     margin-top: 0.25rem;
   }
+  .lg\:-mt-4 {
+    margin-top: -1rem;
+  }
+  .lg\:-mt-\[14\] {
+    margin-top: -14;
+  }
+  .lg\:-mt-\[14px\] {
+    margin-top: -14px;
+  }
   .lg\:block {
     display: block;
   }
@@ -2622,11 +2639,14 @@ img, video {
   .lg\:gap-36 {
     gap: 9rem;
   }
+  .lg\:gap-4 {
+    gap: 1rem;
+  }
   .lg\:gap-6 {
     gap: 1.5rem;
   }
-  .lg\:gap-4 {
-    gap: 1rem;
+  .lg\:gap-3 {
+    gap: 0.75rem;
   }
   .lg\:border-\[1px\] {
     border-width: 1px;
@@ -3047,10 +3067,10 @@ main {
   min-height: auto;
 }
 main.bg-blue .struct_no_hover, main.bg-purple .struct_no_hover, main.bg-green .struct_no_hover {
-  display: none;
+  opacity: 0;
 }
 main.bg-blue .struct_hover, main.bg-purple .struct_hover, main.bg-green .struct_hover {
-  display: block;
+  opacity: 1;
 }
 main.bg-blue .struct_hover_text, main.bg-blue h1, main.bg-blue .hands_nav p, main.bg-blue .initiative_text, main.bg-purple .struct_hover_text, main.bg-purple h1, main.bg-purple .hands_nav p, main.bg-purple .initiative_text, main.bg-green .struct_hover_text, main.bg-green h1, main.bg-green .hands_nav p, main.bg-green .initiative_text {
   color: #fff;
@@ -3571,16 +3591,16 @@ nav .nav a:hover::before {
   stroke-dashoffset: 1500;
 }
 .animate_elips.speed_1 {
-  animation: animate_elips 1.5s 300ms linear forwards;
+  animation: animate_elips 2.5s 300ms linear infinite;
 }
 .animate_elips.speed_2 {
-  animation: animate_elips 1.5s 500ms linear forwards;
+  animation: animate_elips 2.5s 500ms linear infinite;
 }
 .animate_elips.speed_3 {
-  animation: animate_elips 1.5s 700ms linear forwards;
+  animation: animate_elips 2.5s 700ms linear infinite;
 }
 .animate_elips.speed_4 {
-  animation: animate_elips 1.5s 900ms linear forwards;
+  animation: animate_elips 2.5s 900ms linear infinite;
 }
 
 .strat_star_show {
@@ -3604,8 +3624,35 @@ nav .nav a:hover::before {
     stroke-dashoffset: 0;
   }
 }
+.logo_hand_animation {
+  transform: rotate(-90deg);
+  animation: logo_hand_animation 600ms 800ms linear forwards;
+}
+
+@keyframes logo_hand_animation {
+  from {
+    transform: rotate(-90deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
+.text_select {
+  transition: all 180ms;
+  transform: scale(1);
+}
+.text_select:hover {
+  opacity: 100 !important;
+  transition: all 180ms;
+  transform: scale(1.2);
+}
 .text_select.active {
   opacity: 100 !important;
+  transition: all 180ms;
+  transform: scale(1.4);
+}
+.text_select.active .strat_star_show {
+  opacity: 100;
 }
 
 .desc_text {
@@ -3616,7 +3663,7 @@ nav .nav a:hover::before {
 }
 
 .static_left {
-  left: calc((100vw - 956px) / 2 + 13px);
+  left: calc((100vw - 956px) / 2 - 7px);
   max-width: 159.3333333333px;
 }
 
