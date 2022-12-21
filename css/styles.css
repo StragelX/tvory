@@ -2346,6 +2346,9 @@ img, video {
 
 .grayscale {
   --tw-grayscale:grayscale(100%);
+}
+
+.filter, .grayscale {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
@@ -3414,7 +3417,7 @@ nav .nav a:hover::before {
 }
 @media all and (max-width: 1370px) {
   .star {
-    left: 0;
+    left: -5px;
   }
 }
 .star > div {
