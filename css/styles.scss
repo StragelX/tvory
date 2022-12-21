@@ -427,6 +427,13 @@ nav .nav a {
   transform: scaleX(-1);
 }
 
+.small_horizontal_padding {
+  padding-left: 40px;
+  padding-right: 36px;
+}
+
+$time: 400ms;
+
 .star {
   height: 11px;
   width: 11px;
@@ -434,6 +441,10 @@ nav .nav a {
   left: calc(-40% + -5px);
   bottom: 210px;
   background-color: #d0d0d0;
+
+  @media all and (width: 1920px) {
+    left: calc(-31% + -5px);
+  }
 
   @media all and (max-width: 1440px) {
     left: calc(-10% + -5px);
@@ -473,13 +484,6 @@ nav .nav a {
   }
 }
 
-.small_horizontal_padding {
-  padding-left: 40px;
-  padding-right: 36px;
-}
-
-$time: 400ms;
-
 .bl {
   border-left: 1px solid #d0d0d0;
 }
@@ -500,6 +504,10 @@ $time: 400ms;
     top: -210px;
     animation: vertical_line_22 $time forwards;
 
+    @media all and (width: 1920px) {
+      left: -31%;
+    }
+
     @media all and (width: 1440px) {
       left: -10%;
     }
@@ -510,6 +518,11 @@ $time: 400ms;
     border-bottom: 1px solid #d0d0d0;
     margin-left: -40%;
     animation: horizontal_w_140 $time $time forwards;
+
+    @media all and (width: 1920px) {
+      margin-left: -31%;
+      animation: horizontal_w_131 $time $time forwards;
+    }
 
     @media all and (width: 1440px) {
       margin-left: -10%;
@@ -555,22 +568,37 @@ $time: 400ms;
   from {opacity: 0;}
   to {opacity: 1;}
 }
+
+@keyframes show_first {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
 @keyframes horizontal_w_140 {
   from {width: 0;}
   to {width: 140%;}
 }
+
+@keyframes horizontal_w_131 {
+  from {width: 0;}
+  to {width: 131%;}
+}
+
 @keyframes horizontal_w_110 {
   from {width: 0;}
   to {width: 110%;}
 }
+
 @keyframes vertical_line_22 {
   from {height: 0;}
   to {height: 210px;}
 }
+
 @keyframes vertical_line_100 {
   from {height: 0;}
   to {height: 100%;}
 }
+
 @keyframes vertical_line_40 {
   from {height: 0;}
   to {height: 590px;}
@@ -668,9 +696,11 @@ $elips_animate_spped: 2.5s;
   }
 }
 
-.logo_hand_animation {
-  transform: rotate(-90deg);
-  animation: logo_hand_animation 600ms 800ms linear forwards;
+.aos-animate {
+  .logo_hand_animation {
+    transform: rotate(-90deg);
+    animation: logo_hand_animation 400ms 600ms linear forwards;
+  }
 }
 
 @keyframes logo_hand_animation {
@@ -688,18 +718,21 @@ $elips_animate_spped: 2.5s;
   transform: scale(1);
 
   &:hover {
-    opacity: 100 !important;
+    opacity: 1 !important;
     transition: all 180ms;
     transform: scale(1.2);
   }
 
   &.active {
-    opacity: 100 !important;
+    opacity: 1 !important;
     transition: all 180ms;
     transform: scale(1.4);
 
-    .strat_star_show {
-      opacity: 100;
+    &.first {
+      .strat_star {
+        opacity: 0;
+        animation: show_first 200ms 0.8s linear forwards;
+      }
     }
   }
 }
@@ -766,4 +799,11 @@ $elips_animate_spped: 2.5s;
   height: 70%;
   left: 15%;
   top: 15%;
+}
+
+.owl_prev, .owl_next {
+  img {
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+  }
 }

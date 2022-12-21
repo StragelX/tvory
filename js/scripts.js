@@ -13,7 +13,7 @@ $(document).ready(function () {
   });
 
   $(".text_select").click(function () {
-    $(".text_select").removeClass("active");
+    $(".text_select").removeClass("active first");
     $(this).addClass("active");
 
     let id = $(this).data("id");
@@ -25,6 +25,17 @@ $(document).ready(function () {
       }
     });
   });
+
+  const url = new URL(window.location.href);
+  if (url.pathname === "/stratagy.html") {
+    if (url.hash) {
+      let hash = url.hash;
+      $(hash).addClass("first active");
+      $(hash).trigger("click");
+    } else {
+      $(".text_select").first().addClass("first active");
+    }
+  }
 
   $(".workers_switch button").click(function () {
     $(this).siblings().removeClass("active");
