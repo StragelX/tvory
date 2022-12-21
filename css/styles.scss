@@ -801,7 +801,8 @@ $elips_animate_spped: 2.5s;
   top: 15%;
 }
 
-.owl_prev, .owl_next {
+
+.owl_next {
   img {
     transform: translate3d(0,0,0);
     -webkit-transform: translate3d(0,0,0);
