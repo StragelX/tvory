@@ -446,6 +446,10 @@ $time: 400ms;
     left: calc(-31% + -5px);
   }
 
+  @media all and (width: 1536px) {
+    left: calc(-6% + -5px);
+  }
+
   @media all and (max-width: 1440px) {
     left: calc(-10% + -5px);
   }
@@ -508,6 +512,10 @@ $time: 400ms;
       left: -31%;
     }
 
+    @media all and (width: 1536px) {
+      left: -6%;
+    }
+
     @media all and (width: 1440px) {
       left: -10%;
     }
@@ -522,6 +530,11 @@ $time: 400ms;
     @media all and (width: 1920px) {
       margin-left: -31%;
       animation: horizontal_w_131 $time $time forwards;
+    }
+
+    @media all and (width: 1536px) {
+      margin-left: -6%;
+      animation: horizontal_w_106 $time $time forwards;
     }
 
     @media all and (width: 1440px) {
@@ -587,6 +600,11 @@ $time: 400ms;
 @keyframes horizontal_w_110 {
   from {width: 0;}
   to {width: 110%;}
+}
+
+@keyframes horizontal_w_106 {
+  from {width: 0;}
+  to {width: 106%;}
 }
 
 @keyframes vertical_line_22 {

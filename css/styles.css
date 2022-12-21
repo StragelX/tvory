@@ -3387,6 +3387,11 @@ nav .nav a:hover::before {
     left: calc(-31% - 5px);
   }
 }
+@media all and (width: 1536px) {
+  .star {
+    left: calc(-6% - 5px);
+  }
+}
 @media all and (max-width: 1440px) {
   .star {
     left: calc(-10% - 5px);
@@ -3445,6 +3450,11 @@ nav .nav a:hover::before {
     left: -31%;
   }
 }
+@media all and (width: 1536px) {
+  .horizontal_line .start {
+    left: -6%;
+  }
+}
 @media all and (width: 1440px) {
   .horizontal_line .start {
     left: -10%;
@@ -3460,6 +3470,12 @@ nav .nav a:hover::before {
   .horizontal_line .horizont {
     margin-left: -31%;
     animation: horizontal_w_131 400ms 400ms forwards;
+  }
+}
+@media all and (width: 1536px) {
+  .horizontal_line .horizont {
+    margin-left: -6%;
+    animation: horizontal_w_106 400ms 400ms forwards;
   }
 }
 @media all and (width: 1440px) {
@@ -3539,6 +3555,14 @@ nav .nav a:hover::before {
   }
   to {
     width: 110%;
+  }
+}
+@keyframes horizontal_w_106 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 106%;
   }
 }
 @keyframes vertical_line_22 {
