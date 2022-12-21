@@ -442,16 +442,32 @@ $time: 400ms;
   bottom: 210px;
   background-color: #d0d0d0;
 
+  @media all and (width: 2560px) {
+    left: calc(-72% + -5px);
+  }
+
   @media all and (width: 1920px) {
     left: calc(-31% + -5px);
+  }
+
+  @media all and (width: 1680px) {
+    left: calc(-15% + -5px);
+  }
+
+  @media all and (width: 1600px) {
+    left: calc(-10% + -5px);
   }
 
   @media all and (width: 1536px) {
     left: calc(-6% + -5px);
   }
 
-  @media all and (max-width: 1440px) {
+  @media all and (width: 1440px) {
     left: calc(-10% + -5px);
+  }
+
+  @media all and (max-width: 1370px) {
+    left: 0;
   }
 
   & > div {
@@ -508,8 +524,20 @@ $time: 400ms;
     top: -210px;
     animation: vertical_line_22 $time forwards;
 
+    @media all and (width: 2560px) {
+      left: -72%;
+    }
+
     @media all and (width: 1920px) {
       left: -31%;
+    }
+
+    @media all and (width: 1680px) {
+      left: -15%;
+    }
+
+    @media all and (width: 1600px) {
+      left: -10%;
     }
 
     @media all and (width: 1536px) {
@@ -519,6 +547,10 @@ $time: 400ms;
     @media all and (width: 1440px) {
       left: -10%;
     }
+
+    @media all and (max-width: 1370px) {
+      left: 0;
+    }
   }
 
   .horizont {
@@ -527,9 +559,24 @@ $time: 400ms;
     margin-left: -40%;
     animation: horizontal_w_140 $time $time forwards;
 
+    @media all and (width: 2560px) {
+      margin-left: -72%;
+      animation: horizontal_w_172 $time $time forwards;
+    }
+
     @media all and (width: 1920px) {
       margin-left: -31%;
       animation: horizontal_w_131 $time $time forwards;
+    }
+
+    @media all and (width: 1680px) {
+      margin-left: -15%;
+      animation: horizontal_w_115 $time $time forwards;
+    }
+
+    @media all and (width: 1600px) {
+      margin-left: -10%;
+      animation: horizontal_w_110 $time $time forwards;
     }
 
     @media all and (width: 1536px) {
@@ -540,6 +587,11 @@ $time: 400ms;
     @media all and (width: 1440px) {
       margin-left: -10%;
       animation: horizontal_w_110 $time $time forwards;
+    }
+
+    @media all and (max-width: 1370px) {
+      margin-left: 0;
+      animation: horizontal_w_100 $time $time forwards;
     }
   }
 
@@ -587,24 +639,33 @@ $time: 400ms;
   to {opacity: 1;}
 }
 
-@keyframes horizontal_w_140 {
+@keyframes horizontal_w_100 {
   from {width: 0;}
-  to {width: 140%;}
+  to {width: 100%;}
 }
-
-@keyframes horizontal_w_131 {
+@keyframes horizontal_w_106 {
   from {width: 0;}
-  to {width: 131%;}
+  to {width: 106%;}
 }
-
 @keyframes horizontal_w_110 {
   from {width: 0;}
   to {width: 110%;}
 }
-
-@keyframes horizontal_w_106 {
+@keyframes horizontal_w_115 {
   from {width: 0;}
-  to {width: 106%;}
+  to {width: 115%;}
+}
+@keyframes horizontal_w_131 {
+  from {width: 0;}
+  to {width: 131%;}
+}
+@keyframes horizontal_w_140 {
+  from {width: 0;}
+  to {width: 140%;}
+}
+@keyframes horizontal_w_172 {
+  from {width: 0;}
+  to {width: 172%;}
 }
 
 @keyframes vertical_line_22 {
@@ -819,7 +880,8 @@ $elips_animate_spped: 2.5s;
   top: 15%;
 }
 
-.owl_prev, .owl_next {
+
+.owl_next {
   img {
     transform: translate3d(0,0,0);
     -webkit-transform: translate3d(0,0,0);

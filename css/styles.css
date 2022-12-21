@@ -3382,9 +3382,24 @@ nav .nav a:hover::before {
   bottom: 210px;
   background-color: #d0d0d0;
 }
+@media all and (width: 2560px) {
+  .star {
+    left: calc(-72% - 5px);
+  }
+}
 @media all and (width: 1920px) {
   .star {
     left: calc(-31% - 5px);
+  }
+}
+@media all and (width: 1680px) {
+  .star {
+    left: calc(-15% - 5px);
+  }
+}
+@media all and (width: 1600px) {
+  .star {
+    left: calc(-10% - 5px);
   }
 }
 @media all and (width: 1536px) {
@@ -3392,9 +3407,14 @@ nav .nav a:hover::before {
     left: calc(-6% - 5px);
   }
 }
-@media all and (max-width: 1440px) {
+@media all and (width: 1440px) {
   .star {
     left: calc(-10% - 5px);
+  }
+}
+@media all and (max-width: 1370px) {
+  .star {
+    left: 0;
   }
 }
 .star > div {
@@ -3445,9 +3465,24 @@ nav .nav a:hover::before {
   top: -210px;
   animation: vertical_line_22 400ms forwards;
 }
+@media all and (width: 2560px) {
+  .horizontal_line .start {
+    left: -72%;
+  }
+}
 @media all and (width: 1920px) {
   .horizontal_line .start {
     left: -31%;
+  }
+}
+@media all and (width: 1680px) {
+  .horizontal_line .start {
+    left: -15%;
+  }
+}
+@media all and (width: 1600px) {
+  .horizontal_line .start {
+    left: -10%;
   }
 }
 @media all and (width: 1536px) {
@@ -3460,16 +3495,39 @@ nav .nav a:hover::before {
     left: -10%;
   }
 }
+@media all and (max-width: 1370px) {
+  .horizontal_line .start {
+    left: 0;
+  }
+}
 .horizontal_line .horizont {
   width: 0;
   border-bottom: 1px solid #d0d0d0;
   margin-left: -40%;
   animation: horizontal_w_140 400ms 400ms forwards;
 }
+@media all and (width: 2560px) {
+  .horizontal_line .horizont {
+    margin-left: -72%;
+    animation: horizontal_w_172 400ms 400ms forwards;
+  }
+}
 @media all and (width: 1920px) {
   .horizontal_line .horizont {
     margin-left: -31%;
     animation: horizontal_w_131 400ms 400ms forwards;
+  }
+}
+@media all and (width: 1680px) {
+  .horizontal_line .horizont {
+    margin-left: -15%;
+    animation: horizontal_w_115 400ms 400ms forwards;
+  }
+}
+@media all and (width: 1600px) {
+  .horizontal_line .horizont {
+    margin-left: -10%;
+    animation: horizontal_w_110 400ms 400ms forwards;
   }
 }
 @media all and (width: 1536px) {
@@ -3482,6 +3540,12 @@ nav .nav a:hover::before {
   .horizontal_line .horizont {
     margin-left: -10%;
     animation: horizontal_w_110 400ms 400ms forwards;
+  }
+}
+@media all and (max-width: 1370px) {
+  .horizontal_line .horizont {
+    margin-left: 0;
+    animation: horizontal_w_100 400ms 400ms forwards;
   }
 }
 .horizontal_line .end {
@@ -3533,20 +3597,20 @@ nav .nav a:hover::before {
     opacity: 1;
   }
 }
-@keyframes horizontal_w_140 {
+@keyframes horizontal_w_100 {
   from {
     width: 0;
   }
   to {
-    width: 140%;
+    width: 100%;
   }
 }
-@keyframes horizontal_w_131 {
+@keyframes horizontal_w_106 {
   from {
     width: 0;
   }
   to {
-    width: 131%;
+    width: 106%;
   }
 }
 @keyframes horizontal_w_110 {
@@ -3557,12 +3621,36 @@ nav .nav a:hover::before {
     width: 110%;
   }
 }
-@keyframes horizontal_w_106 {
+@keyframes horizontal_w_115 {
   from {
     width: 0;
   }
   to {
-    width: 106%;
+    width: 115%;
+  }
+}
+@keyframes horizontal_w_131 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 131%;
+  }
+}
+@keyframes horizontal_w_140 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 140%;
+  }
+}
+@keyframes horizontal_w_172 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 172%;
   }
 }
 @keyframes vertical_line_22 {
@@ -3752,7 +3840,7 @@ nav .nav a:hover::before {
   top: 15%;
 }
 
-.owl_prev img, .owl_next img {
+.owl_next img {
   transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
 }/*# sourceMappingURL=styles.css.map */
