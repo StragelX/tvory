@@ -799,13 +799,13 @@ $elips_animate_spped: 2.5s;
   &:hover {
     opacity: 1 !important;
     transition: all 180ms;
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 
   &.active {
     opacity: 1 !important;
     transition: all 180ms;
-    transform: scale(1.4);
+    transform: scale(1.2);
 
     &.first {
       .strat_star {

@@ -2316,6 +2316,11 @@ img, video {
   color: rgb(77 77 77/var(--tw-text-opacity));
 }
 
+.text-\[\#2B286F\], .text-blue {
+  --tw-text-opacity:1;
+  color: rgb(43 40 111/var(--tw-text-opacity));
+}
+
 .underline {
   text-decoration-line: underline;
 }
@@ -3782,12 +3787,12 @@ nav .nav a:hover::before {
 .text_select:hover {
   opacity: 1 !important;
   transition: all 180ms;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 .text_select.active {
   opacity: 1 !important;
   transition: all 180ms;
-  transform: scale(1.4);
+  transform: scale(1.2);
 }
 .text_select.active.first .strat_star {
   opacity: 0;
