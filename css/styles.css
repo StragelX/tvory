@@ -2138,12 +2138,12 @@ img, video {
   font-family: Kyiv_Type_Sans_3;
 }
 
-.font-kiev {
-  font-family: Kyiv Type Sans;
-}
-
 .font-museo {
   font-family: Museo Sans Cyrl;
+}
+
+.font-kiev {
+  font-family: Kyiv Type Sans;
 }
 
 .text-\[15px\] {
@@ -2316,7 +2316,7 @@ img, video {
   color: rgb(77 77 77/var(--tw-text-opacity));
 }
 
-.text-\[\#2B286F\], .text-blue {
+.text-blue {
   --tw-text-opacity:1;
   color: rgb(43 40 111/var(--tw-text-opacity));
 }
@@ -2351,9 +2351,6 @@ img, video {
 
 .grayscale {
   --tw-grayscale:grayscale(100%);
-}
-
-.filter, .grayscale {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
@@ -2429,10 +2426,6 @@ img, video {
   opacity: 0;
 }
 
-.group.active .group-\[\.active\]\:block, .group.is-published .group-\[\.is-published\]\:block {
-  display: block;
-}
-
 .group.active .group-\[\.active\]\:opacity-100 {
   opacity: 1;
 }
@@ -2464,14 +2457,20 @@ img, video {
   .lg\:left-24 {
     left: 6rem;
   }
+  .lg\:bottom-auto {
+    bottom: auto;
+  }
+  .lg\:top-36 {
+    top: 9rem;
+  }
+  .lg\:left-28 {
+    left: 7rem;
+  }
   .lg\:-bottom-5 {
     bottom: -1.25rem;
   }
   .lg\:top-auto {
     top: auto;
-  }
-  .lg\:left-28 {
-    left: 7rem;
   }
   .lg\:left-auto {
     left: auto;
@@ -2617,6 +2616,9 @@ img, video {
   .lg\:w-\[120px\] {
     width: 120px;
   }
+  .lg\:w-\[170px\] {
+    width: 170px;
+  }
   .lg\:flex-row {
     flex-direction: row;
   }
@@ -2735,6 +2737,9 @@ img, video {
   }
   .lg\:font-medium {
     font-weight: 500;
+  }
+  .lg\:font-normal {
+    font-weight: 400;
   }
   .lg\:italic {
     font-style: italic;
