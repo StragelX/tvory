@@ -1,8 +1,8 @@
 $(document).ready(function () {
   $(".burger").on("click", function () {
     $(this).toggleClass("active");
-    $(".logo").toggleClass("fill-white");
-    $(".logo").toggleClass("fill-black");
+    $(".index .logo").toggleClass("fill-white");
+    $(".index .logo").toggleClass("fill-black");
     $("nav").toggleClass("hidden");
     $(".lang_switch").toggleClass("!text-black");
     $(".burger > div").toggleClass("bg-black");
@@ -20,6 +20,13 @@ $(document).ready(function () {
 
     $(".desc_text").removeClass("active");
     $(".desc_text").each(function () {
+      if ($(this).data("id") == id) {
+        $(this).addClass("active");
+      }
+    });
+
+    $(".video_link").removeClass("active");
+    $(".video_link").each(function () {
       if ($(this).data("id") == id) {
         $(this).addClass("active");
       }
@@ -79,9 +86,24 @@ $(document).ready(function () {
     $("header").removeClass("whited");
   });
 
+  $(".logo_camp").mouseenter(function () {
+    $("main").addClass("bg-camp_blue");
+    $("header").addClass("whited");
+  });
+
+  $(".logo_camp").mouseleave(function () {
+    $("main").removeClass("bg-camp_blue");
+    $("header").removeClass("whited");
+  });
+
   var owl = $(".owl-carousel").owlCarousel({
     loop: true,
     nav: true,
+  });
+
+  owl.on("changed.owl.carousel", function (event) {
+    var secondItem = $(".owl-item.active").eq(2).find("div").data("date");
+    $(".dates").html(secondItem);
   });
 
   $(".owl_next").click(function () {
@@ -94,8 +116,8 @@ $(document).ready(function () {
 
   AOS.init({
     once: true,
-    delay: 400,
-    anchorPlacement: "bottom-bottom",
+    // delay: 400,
+    // anchorPlacement: "bottom-bottom",
   });
 });
 

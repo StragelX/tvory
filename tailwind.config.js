@@ -12,6 +12,7 @@ module.exports = {
       blue: "#2b286f",
       green: "#2fa341",
       auqa: "#0cc29f",
+      camp_blue: "#2A4D85",
     },
 
     fontFamily: {

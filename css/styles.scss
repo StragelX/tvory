@@ -34,8 +34,9 @@ body {
 main {
   flex: 1 1 auto;
   min-height: auto;
+  overflow-x: hidden;
 
-  &.bg-blue, &.bg-purple, &.bg-green {
+  &.bg-blue, &.bg-purple, &.bg-green, &.bg-camp_blue {
     .struct_no_hover {
       opacity: 0;
     }
@@ -44,19 +45,19 @@ main {
       opacity: 1;
     }
 
-    .struct_hover_text, h1, .hands_nav p, .initiative_text {
-      color: #fff;
+    .struct_hover_text, h1, .hands_nav p, .initiative_text, .initiative_text2, .initiative_text3 {
+      color: rgba(255, 255, 255, 0.7);
     }
 
     .star, .bg-\[\#d0d0d0\] {
-      background-color: #fff;
+      background-color: rgba(255, 255, 255, 0.2);
     }
 
-    .horizont, .bl {
-      border-color: #fff;
+    .horizont, .bl, .bb {
+      border-color: rgba(255, 255, 255, 0.2);
     }
 
-    .logo_moldviz.logo_appear, .logo_lab.logo_appear, .logo_px.logo_appear {
+    .logo_moldviz.logo_appear, .logo_lab.logo_appear, .logo_px.logo_appear, .logo_camp.logo_appear {
       svg {
         fill: #fff;
       }
@@ -89,6 +90,10 @@ main {
     & + footer {
       background-color: #2b286f;
     }
+
+    .struct_hover_b {
+      opacity: 1;
+    }
   }
 
   &.bg-purple {
@@ -108,6 +113,33 @@ main {
     & + footer {
       background-color: #5d2d8d;
     }
+
+    .struct_hover_p {
+      opacity: 1;
+    }
+  }
+
+  &.bg-camp_blue {
+    background-color: #2A4D85;
+    .last_block::before, .star > div {
+      background-color: #2A4D85;
+    }
+
+    .titling_shadow {
+      background: linear-gradient(180deg, #2A4D85 0%, #2A4D85 52%, rgba(0,212,255,0) 100%);
+
+      &::before {
+        background-color: #2A4D85;
+      }
+    }
+
+    & + footer {
+      background-color: #2A4D85;
+    }
+
+    .struct_hover_b2 {
+      opacity: 1;
+    }
   }
 
   &.bg-green {
@@ -126,6 +158,10 @@ main {
     & + footer {
       background-color: #2fa341;
     }
+
+    .struct_hover_g {
+      opacity: 1;
+    }
   }
 }
 
@@ -133,6 +169,12 @@ header {
   &.whited {
     .logo {
       fill: white;
+    }
+
+    .black_icon {
+      path {
+        stroke: #fff !important;
+      }
     }
 
     .burger > div {
@@ -188,6 +230,10 @@ header {
   }
 }
 
+.show_black .burger.active .bg-white {
+  background-color: #000 !important;
+}
+
 nav .nav a {
   position: relative;
 
@@ -216,6 +262,12 @@ nav .nav a {
       opacity: 1;
       transition: opacity 180ms;
     }
+  }
+}
+
+nav:not(:hidden) + header {
+  svg.fill-white {
+    fill: #000 !important;
   }
 }
 
@@ -334,15 +386,82 @@ nav .nav a {
   }
 }
 
+.camp_player {
+  width: 300px;
+  max-width: unset;
+  height: 758px;
+  left: -430px;
+  top: -360px;
+  animation: camp_player 2s step-start infinite;
+
+  @media all and (max-width: 767px) {
+    left: -300px;
+  }
+}
+
+.camp_rider {
+  max-width: unset;
+  width: 292px;
+  height: 384px;
+  right: -310px;
+  top: -290px;
+  animation: camp_rider 2s step-start infinite;
+
+  @media all and (max-width: 767px) {
+    right: -210px;
+  }
+}
+
+@keyframes camp_player {
+  0%{
+    transform: rotate(0);
+  }
+
+  50%{
+    transform: rotate(11.18deg);
+  }
+
+  0%{
+    transform: rotate(0);
+  }
+}
+
+@keyframes camp_rider {
+  0%{
+    transform: rotate(0);
+  }
+
+  50%{
+    transform: rotate(-9.55deg);
+  }
+
+  0%{
+    transform: rotate(0);
+  }
+}
+
 .dino_wrap {
   left: -7%;
   top: 25%;
+  
+  @media all and (max-width: 1025px) {
+    left: -8%;
+  }
+
+  @media all and (max-width: 767px) {
+    left: -28%;
+    top: 19%;
+  }
 }
 
+$dino_time:3s;
+
 .dino {
+  opacity: 0;
   width: 270px;
   max-width: unset;
   transform: rotate(5deg);
+  animation: dino_show $dino_time step-start infinite;
 
   @media all and (min-width: 1024px) {
     width: 467px;
@@ -352,23 +471,48 @@ nav .nav a {
 }
 
 .dino_face {
+  opacity: 0;
   width: 160px;
   top: 121px;
   left: 307px;
-  animation: dino_face_show 1.5s step-start infinite;
+  animation: dino_face_show $dino_time step-start infinite;
+
+  @media all and (max-width: 767px) {
+    width: 100px;
+    top: 70px;
+    left: 170px;
+  }
+}
+
+@keyframes dino_show {
+  0%{
+    opacity: 1;
+  }
+
+  80%{
+    opacity: 1;
+  }
+
+  0%{
+    opacity: 0;
+  }
 }
 
 @keyframes dino_face_show {
   0%{
-    opacity: 1;
-  }
-
-  50%{
     opacity: 0;
   }
 
-  0%{
+  20%{
+    opacity: 0;
+  }
+
+  50%{
     opacity: 1;
+  }
+
+  0%{
+    opacity: 0;
   }
 }
 
@@ -384,7 +528,7 @@ nav .nav a {
 
 .arrow_hor {
   transform: rotate(113deg);
-  bottom: -33px;
+  bottom: -19px;
 }
 
 .worker_wrap {
@@ -438,36 +582,12 @@ $time: 400ms;
   height: 11px;
   width: 11px;
   position: absolute;
-  left: calc(-40% + -5px);
-  bottom: 210px;
+  left: calc(6% + 2px);
+  bottom: 100px;
   background-color: #d0d0d0;
 
-  @media all and (width: 2560px) {
-    left: calc(-72% + -5px);
-  }
-
-  @media all and (width: 1920px) {
-    left: calc(-31% + -5px);
-  }
-
-  @media all and (width: 1680px) {
-    left: calc(-15% + -5px);
-  }
-
-  @media all and (width: 1600px) {
-    left: calc(-10% + -5px);
-  }
-
-  @media all and (width: 1536px) {
-    left: calc(-6% + -5px);
-  }
-
-  @media all and (width: 1440px) {
-    left: calc(-10% + -5px);
-  }
-
-  @media all and (max-width: 1370px) {
-    left: -5px;
+  @media all and (max-width: 900px) {
+    left: calc(6% + 1px);
   }
 
   & > div {
@@ -512,6 +632,10 @@ $time: 400ms;
   border-bottom: 1px solid #d0d0d0;
 }
 
+.last_vert {
+  animation: vertical_line_100 $time ($time*6) forwards;
+}
+
 .horizontal_line {
   position: relative;
   margin-left: -30px;
@@ -520,79 +644,53 @@ $time: 400ms;
   .start {
     width: 1px;
     position: absolute;
-    left: -40%;
-    top: -210px;
-    animation: vertical_line_22 $time forwards;
-
-    @media all and (width: 2560px) {
-      left: -72%;
-    }
-
-    @media all and (width: 1920px) {
-      left: -31%;
-    }
-
-    @media all and (width: 1680px) {
-      left: -15%;
-    }
-
-    @media all and (width: 1600px) {
-      left: -10%;
-    }
-
-    @media all and (width: 1536px) {
-      left: -6%;
-    }
-
-    @media all and (width: 1440px) {
-      left: -10%;
-    }
-
-    @media all and (max-width: 1370px) {
-      left: 0;
-    }
+    left: 7%;
+    top: -100px;
+    animation: vertical_line_100p $time forwards;
   }
 
   .horizont {
     width: 0;
     border-bottom: 1px solid #d0d0d0;
-    margin-left: -40%;
-    animation: horizontal_w_140 $time $time forwards;
+    // margin-left: -40%;
+    margin-left: 7%;
+    // animation: horizontal_w_140 $time $time forwards;
+    animation: horizontal_w_93 $time $time forwards;
 
-    @media all and (width: 2560px) {
-      margin-left: -72%;
-      animation: horizontal_w_172 $time $time forwards;
-    }
+    // @media all and (width: 2560px) {
+    //   margin-left: -72%;
+    //   animation: horizontal_w_172 $time $time forwards;
+    // }
 
-    @media all and (width: 1920px) {
-      margin-left: -31%;
-      animation: horizontal_w_131 $time $time forwards;
-    }
+    // @media all and (width: 1920px) {
+    //   margin-left: -31%;
+    //   animation: horizontal_w_131 $time $time forwards;
+    // }
 
-    @media all and (width: 1680px) {
-      margin-left: -15%;
-      animation: horizontal_w_115 $time $time forwards;
-    }
+    // @media all and (width: 1680px) {
+    //   margin-left: -15%;
+    //   animation: horizontal_w_115 $time $time forwards;
+    // }
 
-    @media all and (width: 1600px) {
-      margin-left: -10%;
-      animation: horizontal_w_110 $time $time forwards;
-    }
+    // @media all and (width: 1600px) {
+    //   margin-left: -10%;
+    //   animation: horizontal_w_110 $time $time forwards;
+    // }
 
-    @media all and (width: 1536px) {
-      margin-left: -6%;
-      animation: horizontal_w_106 $time $time forwards;
-    }
+    // @media all and (width: 1536px) {
+    //   margin-left: -6%;
+    //   animation: horizontal_w_106 $time $time forwards;
+    // }
 
-    @media all and (width: 1440px) {
-      margin-left: -10%;
-      animation: horizontal_w_110 $time $time forwards;
-    }
+    // @media all and (width: 1440px) {
+    //   margin-left: -10%;
+    //   animation: horizontal_w_110 $time $time forwards;
+    // }
 
-    @media all and (max-width: 1370px) {
-      margin-left: 0;
-      animation: horizontal_w_100 $time $time forwards;
-    }
+    // @media all and (max-width: 1370px) {
+    //   margin-left: 0;
+    //   animation: horizontal_w_100 $time $time forwards;
+    // }
   }
 
   .end {
@@ -602,6 +700,19 @@ $time: 400ms;
     right: 0;
     top: 0;
     animation: vertical_line_40 $time ($time*2) forwards;
+  }
+
+  .start_down {
+    width: 1px;
+    height: 0;
+    position: absolute;
+    left: 7%;
+    top: 0;
+    animation: vertical_line_696 400ms 800ms forwards;
+
+    @media all and (max-width: 900px) {
+      animation: vertical_line_645 400ms 800ms forwards;
+    }
   }
 }
 
@@ -621,6 +732,26 @@ $time: 400ms;
   animation: horizontal_w_140 $time ($time*3) forwards;
 }
 
+.horizontal_3_1 {
+  animation: horizontal_w_200 $time ($time*3) forwards;
+
+  @media all and (max-width: 900px) {
+    animation: horizontal_w_140 $time ($time*3) forwards;
+  }
+}
+
+.horizontal_4 {
+  animation: horizontal_w_200 $time ($time*6) forwards;
+}
+
+.horizontal_5 {
+  animation: horizontal_w_24 $time ($time*7) forwards;
+}
+
+.dot_1 {
+  animation: arrow_show ($time/2) ($time*7) forwards;
+}
+
 .arrow_1 {
   animation: arrow_show ($time/2) ($time*5) forwards;
 }
@@ -638,7 +769,14 @@ $time: 400ms;
   from {opacity: 0;}
   to {opacity: 1;}
 }
-
+@keyframes horizontal_w_24 {
+  from {width: 0;}
+  to {width: 24px;}
+}
+@keyframes horizontal_w_93 {
+  from {width: 0;}
+  to {width: 93%;}
+}
 @keyframes horizontal_w_100 {
   from {width: 0;}
   to {width: 100%;}
@@ -663,24 +801,55 @@ $time: 400ms;
   from {width: 0;}
   to {width: 140%;}
 }
+@keyframes horizontal_w_200 {
+  from {width: 0;}
+  to {width: 200%;}
+}
 @keyframes horizontal_w_172 {
   from {width: 0;}
   to {width: 172%;}
 }
 
+@keyframes vertical_line_86 {
+  from {height: 0;}
+  to {height: 86px;}
+}
+@keyframes vertical_line_100p {
+  from {height: 0;}
+  to {height: 100px;}
+}
 @keyframes vertical_line_22 {
   from {height: 0;}
   to {height: 210px;}
 }
-
 @keyframes vertical_line_100 {
   from {height: 0;}
   to {height: 100%;}
 }
-
 @keyframes vertical_line_40 {
   from {height: 0;}
   to {height: 590px;}
+}
+@keyframes vertical_line_696 {
+  from {height: 0;}
+  to {height: 669px;}
+}
+@keyframes vertical_line_493 {
+  from {height: 0;}
+  to {height: 493px;}
+}
+
+@keyframes vertical_line_962 {
+  from {height: 0;}
+  to {height: 962px;}
+}
+@keyframes vertical_line_656 {
+  from {height: 0;}
+  to {height: 656px;}
+}
+@keyframes vertical_line_645 {
+  from {height: 0;}
+  to {height: 645px;}
 }
 
 .rotate_90_5 {
@@ -702,13 +871,46 @@ $time: 400ms;
 
 .initiative_text {
   transform-origin: right;
-  top: 35%;
+  left: -91%;
+  top: 50%;
   transform: rotate(-90deg);
   animation: arrow_show ($time/2) ($time*4) forwards;
+
+  @media all and (max-width: 900px) {
+    left: -121%;
+  }
+}
+
+.initiative_text2 {
+  transform-origin: right;
+  top: 35%;
+  transform: rotate(-90deg);
+  animation: arrow_show ($time/2) ($time*8) forwards;
+}
+
+.initiative_text3 {
+  transform-origin: right;
+  left: -14.4%;
+  top: 325px;
+  transform: rotate(-90deg);
+  animation: arrow_show ($time/2) ($time*3) forwards;
+
+  @media all and (max-width: 1025px) {
+    left: -16.5%;
+  }
+
+  @media all and (max-width: 900px) {
+    top: 205px;
+    left: -19.5%;
+  }
 }
 
 .logo_appear {
   animation: arrow_show $time ($time*5) forwards;
+}
+
+.logo_appear_2 {
+  animation: arrow_show $time ($time*7) forwards;
 }
 
 .titling_shadow {
@@ -816,6 +1018,13 @@ $elips_animate_spped: 2.5s;
   }
 }
 
+.video_link {
+  display: none !important;
+
+  &.active {
+    display: flex !important;
+  }
+}
 
 .desc_text {
   display: none;
@@ -848,6 +1057,10 @@ $elips_animate_spped: 2.5s;
   .owl-stage-outer {
     padding-top: 60px;
     padding-bottom: 30px;
+
+    @media all and (max-width: 767px) {
+      padding-bottom: 60px;
+    }
   }
 
   .owl-item {
@@ -859,14 +1072,30 @@ $elips_animate_spped: 2.5s;
       opacity: 0.5;
       transform: scale(0.4) translateY(-180px);
       transition: all 180ms;
+
+      @media all and (max-width: 1025px) {
+        transform: scale(0.4) translateY(-180px);
+      }
+
+      @media all and (max-width: 767px) {
+        transform: scale(0.4) translateY(0);
+      }
   
       & + .active {
         opacity: 1;
         transform: scale(1) translateY(0);
+
+        @media all and (max-width: 767px) {
+          transform: scale(1) translateY(30px) translateX(-10px);
+        }
   
         & + .active {
           opacity: 0.5;
           transform: scale(0.4) translateY(70px);
+
+          @media all and (max-width: 767px) {
+            transform: scale(0.4) translateY(110px);
+          }
         }
       }
     }
@@ -874,10 +1103,10 @@ $elips_animate_spped: 2.5s;
 }
 
 .logo_hover {
-  width: 70%;
-  height: 70%;
-  left: 15%;
-  top: 15%;
+  width: 90%;
+  height: 90%;
+  left: 5%;
+  top: 5%;
 }
 
 .owl_next {
@@ -885,4 +1114,86 @@ $elips_animate_spped: 2.5s;
     transform: translate3d(0,0,0);
     -webkit-transform: translate3d(0,0,0);
   }
+}
+
+.black_star {
+    left: 300px;
+    top: -30px;
+}
+
+.black_star2 {
+  left: 320px;
+  top: 0;
+}
+
+#hero_text_animayion {
+	transform-origin: left;
+}
+
+.small_arrow_line {
+  @media all and (max-width: 900px) {
+  margin-left: -2px !important;
+  }
+}
+
+.small_arrow {
+  @media all and (max-width: 900px) {
+    right: -20px !important;
+  }
+  
+  @media all and (max-width: 767px) {
+    right: -16px !important;
+  }
+}
+
+.small_mid_ball {
+  @media all and (max-width: 900px) {
+    right: -19px !important;
+  }
+}
+
+
+// $time
+// animation: arrow_show ($time/2) ($time*7) forwards;
+
+.s_star {
+  bottom: auto;
+  top: -90px;
+  left: 36px;
+  opacity: 0;
+  animation: arrow_show ($time) ($time*2) forwards;
+}
+
+.from_star {
+  animation: vertical_line_86 ($time) ($time*3) forwards;
+}
+
+.s_horizont {
+  animation: horizontal_w_100 ($time) ($time*4) forwards;
+}
+
+.s_left_line {
+  animation: vertical_line_493 ($time) ($time*4) forwards;
+}
+
+.s_initiative_text {
+  left: auto;
+  right: -14px;
+  top: 30%;
+  transform: rotate(-90deg);
+}
+
+.s_initiative_text3 {
+  right: calc(100% + 12px);
+  white-space: nowrap;
+  top: 256px;
+}
+
+.rotate_arrow {
+  transform: rotate(180deg);
+}
+
+.s_right_line {
+  animation: vertical_line_962 ($time) ($time*5) forwards;
+  // 962px
 }
